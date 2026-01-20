@@ -197,6 +197,36 @@ contract SafeWallet {
 | Sends to caller       | Sends to owner         |
 | Broken access control | Correct access control |
 
+---
+## Summary
+
+- Contract stores owner correctly
+- Authentication is done using `tx.origin`
+- `tx.origin` checks who started the transaction, not who is calling
+- Malicious contracts can sit between owner and wallet
+- Wallet sends ETH to `msg.sender`
+- Results in phishing-based fund drain
+
+---
+
+## Core Lesson
+
+- `tx.origin` must never be used for access control
+- Access control must always rely on `msg.sender`
+- Contracts should authenticate the immediate caller
+- Using `tx.origin` enables contract-based privilege escalation
+
+---
+
+## Real-World Context
+
+- Commonly exploited via phishing dApps
+- Seen in multiple real-world wallet drain attacks
+- Attackers deploy intermediary contracts to bypass checks
+- Users unknowingly authorize malicious transactions
+- Auditors treat `tx.origin` usage as a critical access control flaw
+
+
 
 ## FINAL ONE-LINE SUMMARY (MEMORIZE THIS)
 
