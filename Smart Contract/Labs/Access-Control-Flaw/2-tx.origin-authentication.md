@@ -198,6 +198,16 @@ contract SafeWallet {
 | Broken access control | Correct access control |
 
 ---
+
+
+
+## FINAL ONE-LINE SUMMARY (MEMORIZE THIS)
+
+- tx.origin checks who STARTED the transaction, but msg.sender checks who is CALLING now — access control must always use msg.sender.
+
+<img width="824" height="355" alt="image" src="https://github.com/user-attachments/assets/68da7f25-1539-4f59-a3a4-b1f3a615773e" />
+
+---
 ## Summary
 
 - Contract stores owner correctly
@@ -226,10 +236,3 @@ contract SafeWallet {
 - Users unknowingly authorize malicious transactions
 - Auditors treat `tx.origin` usage as a critical access control flaw
 
-
-
-## FINAL ONE-LINE SUMMARY (MEMORIZE THIS)
-
-- tx.origin checks who STARTED the transaction, but msg.sender checks who is CALLING now — access control must always use msg.sender.
-
-<img width="824" height="355" alt="image" src="https://github.com/user-attachments/assets/68da7f25-1539-4f59-a3a4-b1f3a615773e" />
