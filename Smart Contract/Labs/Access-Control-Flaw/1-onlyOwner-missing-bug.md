@@ -185,3 +185,33 @@ require(msg.sender == owner)
 <img width="888" height="996" alt="image" src="https://github.com/user-attachments/assets/4c212d74-1bb7-405b-9777-5f57cdc729e4" />
 
 
+
+
+---
+## Summary
+
+- Contract correctly stores an owner
+- Critical function `withdraw()` is publicly accessible
+- No permission check is enforced
+- Any address can call `withdraw()`
+- Entire contract balance can be drained
+- Results in immediate and total fund loss
+
+---
+
+## Core Lesson
+
+- Access control must be explicitly enforced on critical functions
+- Declaring an owner variable alone provides no security
+- Every sensitive function must verify `msg.sender`
+- Missing permission checks are one of the most common critical bugs
+
+---
+
+## Real-World Context
+
+- Frequently found in beginner and rushed contracts
+- Responsible for many early-stage DeFi exploits
+- Attackers actively scan for public fund-transfer functions
+- One transaction is enough to drain all funds
+- Auditors treat missing access checks as critical severity
