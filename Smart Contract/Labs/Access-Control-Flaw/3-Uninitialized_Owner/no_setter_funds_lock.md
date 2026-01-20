@@ -131,21 +131,38 @@ contract SafeInitializedOwner {
 - Access control is meaningful
 
 ---
+## Test output see funds lock
 
-## CORE LESSON (MEMORIZE THIS)
+<img width="1009" height="355" alt="image" src="https://github.com/user-attachments/assets/bed89f5d-10ff-456e-85c4-5b6c36c31864" />
 
-- An access check is useless if the owner is never initialized.
+
+## Summary
+
+- Contract defines an `owner` variable
+- `owner` is never initialized
+- Default value of `address` is `address(0)`
+- `require(msg.sender == owner)` always fails
+- No function exists to set or change owner
+- No one can call privileged functions
+- Funds sent to the contract become permanently locked
+- This is not an ownership takeover
+
 ---
-## REAL-WORLD CONTEXT
 
-### Common in:
+## Core Lesson
 
-- Proxy contracts
-- Upgradeable contracts
-- Poorly written initializers
-- Attackers scan for:
+- An owner check is useless if the owner is never initialized
+- Uninitialized owner does not always mean an exploitable takeover
+- Without a setter or initializer, the impact is fund lock
+- Access control bugs depend on both state and available functions
 
-```sol
-owner == address(0)
-```
-- One transaction = full takeover
+---
+
+## Real-World Context
+
+- Common in poorly written contracts
+- Frequently seen in upgradeable or proxy patterns
+- Developers assume constructor logic exists when it does not
+- Users can lose funds even without an attacker
+- Auditors must distinguish between takeover bugs and fund-lock bugs
+
