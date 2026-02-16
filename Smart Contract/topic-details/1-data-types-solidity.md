@@ -1,4 +1,3 @@
-16-feb-2026
 
 ## Solidity Deep Knowledge (Core Foundation)
 
