@@ -17,11 +17,9 @@ balance = 500;
 
 Used for:
 
-Token balances
-
-Supply
-
-Amounts
+- Token balances
+- Supply
+- Amounts
 
 
 ### 2-Signed Integer
@@ -41,11 +39,9 @@ bool public isActive = true;
 
 Used for:
 
-Access control
-
-Flags
-
-Conditions
+- Access control
+- Flags
+- Conditions
 
 
 ### 4-Address
@@ -61,9 +57,8 @@ Example: owner = msg.sender;
 
 Used for:
 
-Contract ownership
-
-User tracking
+- Contract ownership
+- User tracking
 
 
 ### 5-Bytes
@@ -74,6 +69,5 @@ bytes32 public hash;
 ```
 Used for:
 
-Hash storage
-
-Signatures
+- Hash storage
+- Signatures
