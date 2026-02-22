@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 1 - Reflected HTML Injection</title>
+</head>
+<body>
+
+<h2>Search Page</h2>
+
+<form method="GET">
+    <input type="text" name="q" placeholder="Search something...">
+    <button type="submit">Search</button>
+</form>
+
+<hr>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q");
+
+    if (query) {
+        document.write("You searched for: " + query);
+    }
+</script>
+
+</body>
+</html>
