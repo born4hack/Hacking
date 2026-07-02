@@ -1,16 +1,56 @@
 # Android Mobile Application Penetration Testing Roadmap
 
-> A complete roadmap for learning Android Mobile Application Penetration Testing from beginner to advanced.
+> A complete roadmap to learn **Android Mobile Application Penetration Testing** from **beginner to advanced** with a strong focus on **bug bounty**, **real-world pentesting**, and **mobile security assessments**.
+
+---
+
+# Phase 0: Computer Science & Linux Fundamentals
+
+Before learning Android, build a strong foundation.
+
+## Linux Basics
+
+Learn:
+
+- Linux File System
+- Users & Groups
+- File Permissions (`chmod`, `chown`)
+- Processes
+- Services
+- Shell Commands
+- Bash Scripting
+- Environment Variables
+- Networking Commands
+- Package Management
+
+## Networking Fundamentals
+
+Learn:
+
+- OSI Model
+- TCP/IP
+- HTTP
+- HTTPS
+- DNS
+- WebSocket
+- TLS
+- Certificates
+- REST API
+- JSON
 
 ---
 
 # Phase 1: Android Fundamentals
+
+---
 
 ## 1. Android Operating System
 
 Learn:
 
 - What is Android?
+- Android History
+- Android Versions
 - Android Architecture
 - Linux Kernel
 - Hardware Abstraction Layer (HAL)
@@ -20,9 +60,32 @@ Learn:
 
 ---
 
-## 2. Android Application Architecture
+## 2. Android Internals
 
 Learn:
+
+- Android Boot Process
+- Bootloader
+- Recovery
+- init Process
+- Zygote
+- System Server
+- Binder IPC
+- AIDL
+- HIDL
+- Package Manager
+- Activity Manager
+- Window Manager
+- ContentResolver
+- SurfaceFlinger
+
+---
+
+## 3. Android Application Architecture
+
+Learn:
+
+### APK Structure
 
 - APK
 - AAB
@@ -38,9 +101,9 @@ Learn:
 
 ---
 
-## 3. Android Components
+## 4. Android Components
 
-Understand each component thoroughly.
+Understand:
 
 - Activity
 - Service
@@ -51,9 +114,9 @@ Understand each component thoroughly.
 
 ---
 
-## 4. Activity Lifecycle
+## 5. Activity Lifecycle
 
-Study each lifecycle callback.
+Study:
 
 - onCreate()
 - onStart()
@@ -64,7 +127,7 @@ Study each lifecycle callback.
 
 ---
 
-## 5. Intents
+## 6. Intents
 
 Learn:
 
@@ -76,7 +139,7 @@ Learn:
 
 ---
 
-## 6. Android Permissions
+## 7. Android Permissions
 
 Learn:
 
@@ -87,7 +150,7 @@ Learn:
 
 ---
 
-## 7. Android Storage
+## 8. Android Storage
 
 Learn:
 
@@ -101,13 +164,13 @@ Learn:
 
 ---
 
-## 8. Android Networking
+## 9. Android Networking
 
 Study:
 
 - HTTP
 - HTTPS
-- REST APIs
+- REST API
 - JSON
 - Retrofit
 - Volley
@@ -116,21 +179,22 @@ Study:
 
 ---
 
-## 9. Android Security Model
+## 10. Android Security Model
 
 Learn:
 
-- Sandbox
 - Linux UID
+- Sandbox
 - Process Isolation
 - SELinux
 - App Signing
 - Android Keystore
 - Google Play Protect
+- Verified Boot
 
 ---
 
-## 10. Android App Signing
+## 11. Android App Signing
 
 Learn:
 
@@ -138,41 +202,126 @@ Learn:
 - Release Certificate
 - APK Signing
 - Signature Verification
+- V1 Signing
+- V2 Signing
+- V3 Signing
+- V4 Signing
 
 ---
 
 # Phase 2: Android Development Basics
 
-You do **not** need to become an Android developer, but you should understand how Android applications are built.
+> You do **NOT** need to become an Android developer, but you must understand how Android applications are built.
 
 Learn:
 
-- Java Basics
-- Kotlin Basics
+## Java Basics
+
+- Variables
+- Loops
+- Methods
+- Classes
+- OOP
+- Collections
+- Exceptions
+
+## Kotlin Basics
+
+- Variables
+- Functions
+- Classes
+- Null Safety
+- Coroutines (Basics)
+
+## Android Development
+
 - Android Studio
 - Gradle
 - XML Layouts
 - Logcat
-- Android Emulator
+- Emulator
+- Debugging
+- Build Variants
+
+**Build 2–3 simple apps:**
+
+- Login App
+- Notes App
+- API App
 
 ---
 
 # Phase 3: Reverse Engineering
 
+---
+
+## Java & Android Bytecode
+
 Learn:
 
 - Java Bytecode
+- JVM Basics
 - DEX Bytecode
 - Smali
-- APK Structure
-- Decompiled Java/Kotlin Code
+- MultiDEX
+- ODEX
+- VDEX
 
-Tools:
+---
+
+## APK Reverse Engineering
+
+Learn:
+
+- Manifest Analysis
+- Resource Analysis
+- Decompiled Java
+- Decompiled Kotlin
+- Smali Editing
+- APK Rebuilding
+- APK Signing
+
+---
+
+## Native Reverse Engineering
+
+Learn:
+
+- ELF Format
+- Shared Libraries (.so)
+- JNI
+- Symbol Tables
+- ARM32 Assembly
+- ARM64 Assembly
+- Calling Convention
+- Stack
+- Registers
+
+---
+
+## Obfuscation
+
+Learn:
+
+- ProGuard
+- R8
+- String Encryption
+- Reflection
+- Dynamic Loading
+
+---
+
+## Tools
 
 - JADX
 - apktool
-- JD-GUI
 - Ghidra
+- JD-GUI
+- Bytecode Viewer
+- readelf
+- objdump
+- strings
+- nm
 
 ---
 
@@ -186,13 +335,24 @@ Learn:
 - Objection
 - Burp Suite
 - Android Emulator
-- Rooted Android Device
+- Rooted Device
+- Magisk
+
+Learn:
+
+- Runtime Hooking
+- Java Hooks
+- Native Hooks
+- Memory Inspection
+- Process Inspection
+- SSL Pinning Bypass
+- Root Detection Bypass
 
 ---
 
-# Phase 5: Android Vulnerabilities
+# Phase 5: Android Security Testing
 
-Study the following vulnerabilities:
+---
 
 ## Storage
 
@@ -200,22 +360,34 @@ Study the following vulnerabilities:
 - SharedPreferences Leakage
 - SQLite Exposure
 - Backup Vulnerabilities
+- World-Readable Files
+
+---
 
 ## Secrets
 
-- Hardcoded API Keys
+- API Keys
 - Hardcoded Credentials
 - Hardcoded Tokens
+- Secrets in Native Libraries
+
+---
 
 ## Cryptography
 
 - Weak Encryption
 - Poor Key Management
 - Insecure Random Number Generation
+- Weak Hashing
+
+---
 
 ## Logging
 
-- Sensitive Data in Logs
+- Sensitive Logs
+- Logcat Leakage
+
+---
 
 ## Components
 
@@ -224,38 +396,70 @@ Study the following vulnerabilities:
 - Exported Broadcast Receivers
 - Exported Content Providers
 
-## Communication
+---
+
+## IPC
 
 - Intent Injection
+- Intent Redirection
+- PendingIntent Vulnerabilities
+- Binder Security
+
+---
+
+## WebView
+
+- JavaScript Interface
+- File Access
+- URL Validation
 - Deep Link Vulnerabilities
-- WebView Vulnerabilities
+
+---
 
 ## Network
 
-- SSL Pinning
+- HTTP Communication
 - Certificate Validation
-- Insecure Network Communication
+- SSL Pinning
+- TLS Configuration
+- MITM Testing
+
+---
 
 ## Authentication
 
 - Broken Authentication
-- Session Management Issues
+- Session Management
+- Token Handling
+- Biometric Authentication
+
+---
 
 ## Authorization
 
 - Broken Authorization
 - IDOR
+- Privilege Escalation
+
+---
 
 ## Reverse Engineering
 
-- Code Obfuscation
-- Tamper Detection
 - Root Detection
 - Emulator Detection
+- Tamper Detection
+- Obfuscation
+- Anti-Debugging
+- Anti-Frida
+
+---
 
 ## Native Security
 
-- Native Library (.so) Issues
+- JNI Issues
+- Native Buffer Overflow
+- Unsafe Memory Operations
+- Native Library Analysis
 
 ---
 
@@ -263,17 +467,75 @@ Study the following vulnerabilities:
 
 Learn:
 
-- Frida Hooks
-- Runtime Hooking
+- Advanced Frida
+- Frida Stalker
+- Interceptor
+- Native Instrumentation
+- Memory Scanning
+- Runtime Patching
 - SSL Pinning Bypass
 - Root Detection Bypass
 - Emulator Detection Bypass
-- Anti-Debugging Bypass
 - Anti-Frida Bypass
-- JNI
-- ARM64 Basics
-- Native Library Reverse Engineering
-- Dynamic Instrumentation
+- Anti-Debugging Bypass
+- Dynamic Binary Instrumentation
+- Binder Fuzzing
+- JNI Hooking
+- ARM64 Reverse Engineering
+- Native Exploit Basics
+
+---
+
+# Phase 7: Mobile Security Standards
+
+Learn:
+
+## OWASP Mobile
+
+- OWASP MASVS
+- OWASP MASTG
+- OWASP Mobile Top 10
+
+Learn:
+
+- Security Verification
+- Mobile Threat Modeling
+- Secure Coding Guidelines
+
+---
+
+# Phase 8: Android Device Internals
+
+Learn:
+
+- Bootloader
+- Fastboot
+- Recovery Mode
+- Custom Recovery
+- Rooting
+- Magisk
+- Magisk Modules
+- Custom ROM
+- ADB over TCP
+- Physical Device vs Emulator
+
+---
+
+# Phase 9: Automation
+
+Learn:
+
+## Python
+
+- ADB Automation
+- Frida Automation
+- APK Analysis Scripts
+
+## Automation
+
+- Burp Extensions
+- Frida Scripts
+- Mobile Testing Scripts
 
 ---
 
@@ -288,17 +550,21 @@ Learn:
 
 - ADB
 - Logcat
+- Fastboot
 
 ## Proxy
 
 - Burp Suite
+- mitmproxy
 
-## Reverse Engineering
+## Static Analysis
 
 - JADX
 - apktool
+- Bytecode Viewer
 - Ghidra
 - JD-GUI
+- MobSF
 
 ## Dynamic Analysis
 
@@ -306,68 +572,135 @@ Learn:
 - Objection
 - Drozer
 
-## Miscellaneous
+## Native Analysis
+
+- readelf
+- objdump
+- strings
+- nm
+- GDB
+- LLDB
+
+## Database
 
 - sqlite3
-- MobSF
 
 ---
 
 # Practice Labs
 
-Practice on these intentionally vulnerable applications.
+Practice on intentionally vulnerable applications.
+
+## Beginner
 
 - DIVA (Damn Insecure and Vulnerable App)
 - InsecureShop
 - OWASP GoatDroid
+
+## Intermediate
+
 - DVIA (Android)
+- MSTG Crackmes
+- Damn Vulnerable Hybrid Mobile Apps
+
+## Advanced
+
 - UnCrackable Level 1
 - UnCrackable Level 2
 - UnCrackable Level 3
+- Real Open Source Android Apps
 
 ---
 
-# Learning Order
+# Bug Bounty Practice
 
-1. Android Operating System
-2. Android Architecture
-3. APK Structure
-4. Android Components
-5. Activity Lifecycle
-6. Intents
-7. Permissions
-8. Storage
-9. Networking
-10. Android Security Model
-11. Android Development Basics
-12. Java Basics
-13. Kotlin Basics
-14. Reverse Engineering
-15. Static Analysis
-16. Dynamic Analysis
-17. Android Vulnerabilities
-18. Frida
-19. Objection
-20. Advanced Runtime Manipulation
-21. Practice Labs
-22. Bug Bounty Hunting
+After completing the roadmap:
+
+- Reverse engineer production APKs
+- Analyze exported components
+- Test WebViews
+- Test Deep Links
+- Test SSL Pinning
+- Test Root Detection
+- Analyze Native Libraries
+- Analyze Authentication
+- Analyze Authorization
+- Hunt IDORs
+- Hunt Business Logic Bugs
+- Perform Complete Mobile Assessments
 
 ---
 
-# Goal
+# Recommended Learning Order
 
-By the end of this roadmap you should be able to:
+```
+Linux Basics
+        ↓
+Networking Basics
+        ↓
+Android Fundamentals
+        ↓
+Android Internals
+        ↓
+Android App Architecture
+        ↓
+Android Components
+        ↓
+Activity Lifecycle
+        ↓
+Intents
+        ↓
+Permissions
+        ↓
+Storage
+        ↓
+Networking
+        ↓
+Security Model
+        ↓
+Android Development Basics
+        ↓
+Reverse Engineering
+        ↓
+Static Analysis
+        ↓
+Dynamic Analysis
+        ↓
+Android Vulnerabilities
+        ↓
+Native Security
+        ↓
+Advanced Frida
+        ↓
+OWASP MASVS & MASTG
+        ↓
+Automation
+        ↓
+Practice Labs
+        ↓
+Bug Bounty Hunting
+```
+
+---
+
+# Final Goal
+
+By the end of this roadmap, you should be able to:
 
 - Reverse engineer Android applications
+- Understand Android internals
 - Perform static analysis
 - Perform dynamic analysis
-- Intercept mobile traffic
+- Intercept and modify mobile traffic
 - Bypass SSL pinning
 - Bypass root detection
-- Identify insecure storage
+- Bypass emulator detection
+- Bypass anti-debugging and anti-Frida protections
 - Test exported components
-- Test deep links
+- Test intents and deep links
 - Assess WebView security
-- Analyze native libraries
+- Analyze native libraries (`.so`)
+- Hook Java and native methods using Frida
+- Assess Android applications against OWASP MASVS and MASTG
 - Perform complete Android application penetration tests
-- Find real-world vulnerabilities in production Android applications
+- Discover and responsibly report real-world vulnerabilities in production Android applications
