@@ -49,8 +49,6 @@ Learn:
 Learn:
 
 - What is Android?
-- Android History
-- Android Versions
 - Android Architecture
 - Linux Kernel
 - Hardware Abstraction Layer (HAL)
